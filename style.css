@@ -1,13 +1,30 @@
+* {
+    color: white;
+}
+
 body {
     height: 100vh;
     width: 100%;
-    background-image: url(./assets/weather/bgImg.avif);
+    background-image: url('https://plus.unsplash.com/premium_photo-1724754604523-ab0da10cb8e7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 0;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .main-area {
@@ -19,7 +36,7 @@ body {
     text-align: center;
     background: linear-gradient(to top, rgb(0, 0, 0, 0.15), rgb(255, 255, 255, 0.15));
     backdrop-filter: blur(100px);
-    opacity: 0.8;
+    opacity: 1;
     height: fit-content;
     width: 25rem;
     z-index: 1;
